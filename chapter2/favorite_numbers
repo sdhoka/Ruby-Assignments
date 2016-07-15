@@ -1,0 +1,11 @@
+# Program to calculate favorite number
+
+# Get user's favorite number
+puts " Enter your favorite no. "
+favorite_no = gets.chomp
+
+# Increment favorite_no after converting it to integer
+better_fav_no = favorite_no.to_i + 1
+
+# Display the better favorite no after converting it to string
+puts "The bigger and better favorite no. than " + favorite_no + " is " + better_fav_no.to_s    
