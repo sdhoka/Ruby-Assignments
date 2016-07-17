@@ -1,6 +1,6 @@
 # Program to calculate favorite number
 
-puts "Enter your favorite no. "
+print "Enter your favorite no. "
 favorite_no = gets.chomp
 
 # Increment favorite_no 
