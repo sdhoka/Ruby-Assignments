@@ -1,4 +1,4 @@
-# Angry bird program
+# Angry boss program
 
 puts "What do you want? "
 employee_need = gets.chomp
