@@ -1,6 +1,5 @@
 # Angry boss program
+puts "What do you want?"
+employee_need = gets.chomp.capitalize
 
-puts "What do you want? "
-employee_need = gets.chomp
-
-print "Whaddaya mean \" #{employee_need} \"?!? You're fired!! \n"
+puts "Whaddaya mean '#{employee_need}'?!? You're fired!! "
