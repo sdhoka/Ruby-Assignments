@@ -7,8 +7,7 @@ end_year = gets.chomp.to_i
 puts ""
 puts "Leap years within the given range are : "
 
-while start_year <= end_year
-  
+while start_year <= end_year  
   if start_year % 400 == 0
     puts "#{start_year}"
 
