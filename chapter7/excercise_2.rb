@@ -4,11 +4,11 @@ puts "Enter the array to be sorted."
 
 while true
   data = gets.chomp
-
+  
   if data == "" 
-     break 
+    break 
   else
-      arr.push(data)
+    arr.push(data)
   end
 end   
 
@@ -26,10 +26,9 @@ while i < (arr.length - 1)
     end
     
     j += 1
-end
-
-i += 1
-
+  end
+  
+  i += 1
 end
 
 puts "The sorted array is #{arr}"
