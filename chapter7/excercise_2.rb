@@ -4,10 +4,11 @@ puts "Enter the array to be sorted."
 
 while true
   data = gets.chomp
+
   if data == "" 
      break 
   else
-      arr.push data
+      arr.push(data)
   end
 end   
 
@@ -20,12 +21,12 @@ while i < (arr.length - 1)
   j = 0 
   
   while j < (arr.length - 1 - i)  
-    if arr[j] > arr[j+1]
-      arr[j], arr[j+1] = arr[j+1], arr[j]
+    if arr[j] > arr[j + 1]
+      arr[j], arr[j + 1] = arr[j + 1], arr[j]
     end
     
     j += 1
-  end
+end
 
 i += 1
 
