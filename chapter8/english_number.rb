@@ -17,8 +17,8 @@ def english_number(number)
                'sixteen', 'seventeen', 'eighteen', 'nineteen']
   # Millions
   left  = number
-  write = left/1000_000          # How many millions left to write out?
-  left  = left - write*1000_000  
+  write = left  / 1000_000          # How many millions left to write out?
+  left  = left - write * 1000_000  
 
   if write > 0
     millions = english_number write
@@ -31,8 +31,8 @@ def english_number(number)
   end
 
   # Thousands 
-  write = left/1000          # How many thousands left to write out?
-  left  = left - write*1000  
+  write = left / 1000          # How many thousands left to write out?
+  left  = left - write * 1000  
 
   if write > 0
     thousands = english_number write
@@ -45,8 +45,8 @@ def english_number(number)
   end
 
   # Hundreds 
-  write = left/100          # How many hundreds left to write out?
-  left  = left - write*100  
+  write = left / 100          # How many hundreds left to write out?
+  left  = left - write * 100  
 
   if write > 0
     hundreds  = english_number write
@@ -58,8 +58,8 @@ def english_number(number)
     end
   end
 
-  write = left/10          # How many tens left to write out?
-  left  = left - write*10  
+  write = left / 10          # How many tens left to write out?
+  left  = left - write * 10  
 
   if write > 0
     if ((write == 1) and (left > 0))
