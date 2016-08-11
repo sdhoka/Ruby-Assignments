@@ -1,21 +1,23 @@
 # Interactive 'Baby Dragon' program
-require './dragon_class'
+require './dragon'
 
-puts "What to you want to do?\n\
-      1. feed\n\
-      2. toss\n\
-      3. walk\n\
-      4. rock\n\
-      5. put_to_bed"
+puts <<-EOH
+What to you want to do?\n\
+      1. feed
+      2. toss
+      3. walk
+      4. rock
+      5. put to bed
+EOH
 
 pet = Dragon.new("Tom")
 
 while true
-  print  "Your input : "
+  print "Your input: "
+
   task = gets.chomp.downcase
 
   case task
-
   when "feed"
     pet.feed
   when "toss"
@@ -24,7 +26,7 @@ while true
     pet.walk
   when "rock"
     pet.rock
-  when "put_to_bed"
+  when "put to bed"
     pet.put_to_bed
   else
     puts "invalid input"

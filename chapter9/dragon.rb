@@ -1,6 +1,5 @@
 class Dragon
-
-  def initialize name
+  def initialize(name)
     @name = name
     @asleep = false
     @stuff_in_belly     = 10  # He's full.
@@ -14,7 +13,7 @@ class Dragon
     
     @stuff_in_belly = 10
 
-    passage_of_time
+    complete_one_year
   end
 
   def walk
@@ -22,20 +21,23 @@ class Dragon
 
     @stuff_in_intestine = 0
 
-    passage_of_time
+    complete_one_year
   end
 
   def put_to_bed
     puts 'You put ' + @name + ' to bed.'
 
     @asleep = true
+
     3.times do
       if @asleep
-        passage_of_time
+        complete_one_year
       end
+
       if @asleep
         puts @name + ' snores, filling the room with smoke.'
       end
+
     end
     if @asleep
       @asleep = false
@@ -48,7 +50,7 @@ class Dragon
     puts 'You toss ' + @name + ' up into the air.'
     puts 'He giggles, which singes your eyebrows.'
 
-    passage_of_time
+    complete_one_year
   end
 
   def rock
@@ -57,7 +59,7 @@ class Dragon
 
     @asleep = true
 
-    passage_of_time
+    complete_one_year
 
     if @asleep
       @asleep = false
@@ -83,17 +85,18 @@ class Dragon
     @stuff_in_intestine >= 8
   end
 
-  def passage_of_time
+  def complete_one_year
     if @stuff_in_belly > 0
       # Move food from belly to intestine.
-      @stuff_in_belly     = @stuff_in_belly - 1
-      @stuff_in_intestine = @stuff_in_intestine + 1
+      @stuff_in_belly     -= 1
+      @stuff_in_intestine += 1
     else  # Our dragon is starving!
       if @asleep
         @asleep = false
 
         puts 'He wakes up suddenly!'
       end
+
       puts @name + ' is starving!  In desperation, he ate YOU!'
 
       exit  # This quits the program.
@@ -118,8 +121,10 @@ class Dragon
     if poopy?
       if @asleep
         @asleep = false
+
         puts 'He wakes up suddenly!'
       end
+
       puts @name + ' does the potty dance...'
     end
   end
