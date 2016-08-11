@@ -18,19 +18,12 @@ while true
   task = gets.chomp.downcase
 
   case task
-  when "feed"
-    pet.feed
-  when "toss"
-    pet.toss
-  when "walk"
-    pet.walk
-  when "rock"
-    pet.rock
-  when "put to bed"
-    pet.put_to_bed
-  else
-    puts "invalid input"
-  end
+  when "feed" then  pet.feed
+  when "toss" then  pet.toss
+  when "walk" then   pet.walk
+  when "rock" then   pet.rock
+  when "put to bed" then    pet.put_to_bed
+  else  puts "invalid input" end
 
   puts
 end
