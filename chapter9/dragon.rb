@@ -5,11 +5,11 @@ class Dragon
     @stuff_in_belly     = 10  # He's full.
     @stuff_in_intestine =  0  # He doesn't need to go.
 
-    puts @name + ' is born.'
+    puts "#{@name} is born."
   end
 
   def feed
-    puts 'You feed ' + @name + '.'
+    puts "You feed  #{@name}."
     
     @stuff_in_belly = 10
 
@@ -17,7 +17,7 @@ class Dragon
   end
 
   def walk
-    puts 'You walk ' + @name + '.'
+    puts "You walk #{@name}."
 
     @stuff_in_intestine = 0
 
@@ -25,7 +25,7 @@ class Dragon
   end
 
   def put_to_bed
-    puts 'You put ' + @name + ' to bed.'
+    puts "You put #{@name} to bed."
 
     @asleep = true
 
@@ -35,27 +35,27 @@ class Dragon
       end
 
       if @asleep
-        puts @name + ' snores, filling the room with smoke.'
+        puts "#{@name} snores, filling the room with smoke."
       end
 
     end
     if @asleep
       @asleep = false
 
-      puts @name + ' wakes up slowly.'
+      puts "#{@name} wakes up slowly."
     end
   end
 
   def toss
-    puts 'You toss ' + @name + ' up into the air.'
-    puts 'He giggles, which singes your eyebrows.'
+    puts "You toss #{@name} up into the air."
+    puts "He giggles, which singes your eyebrows."
 
     complete_one_year
   end
 
   def rock
-    puts 'You rock ' + @name + ' gently.' 
-    puts 'He briefly dozes off...'
+    puts "You rock #{@name} gently." 
+    puts "He briefly dozes off..."
 
     @asleep = true
 
@@ -64,7 +64,7 @@ class Dragon
     if @asleep
       @asleep = false
 
-      puts '...but wakes when you stop.'
+      puts "...but wakes when you stop."
     end
   end
 
@@ -94,10 +94,10 @@ class Dragon
       if @asleep
         @asleep = false
 
-        puts 'He wakes up suddenly!'
+        puts "He wakes up suddenly!"
       end
 
-      puts @name + ' is starving!  In desperation, he ate YOU!'
+      puts "#{@name} is starving!  In desperation, he ate YOU!"
 
       exit  # This quits the program.
     end
@@ -105,27 +105,27 @@ class Dragon
     if @stuff_in_intestine >= 10
       @stuff_in_intestine = 0
 
-      puts 'Whoops!  ' + @name + ' had an accident...'
+      puts "Whoops!  #{@name} had an accident..."
     end
 
     if hungry?
       if @asleep
         @asleep = false
 
-        puts 'He wakes up suddenly!'
+        puts "He wakes up suddenly!"
       end
 
-      puts @name + '\'s stomach grumbles...'
+      puts "#{@name}\'s stomach grumbles..."
     end
 
     if poopy?
       if @asleep
         @asleep = false
 
-        puts 'He wakes up suddenly!'
+        puts "He wakes up suddenly!"
       end
 
-      puts @name + ' does the potty dance...'
+      puts "#{@name} does the potty dance..."
     end
   end
 end
