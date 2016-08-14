@@ -1,5 +1,6 @@
 $indentation = 0
 $indent_variable = ' '
+
 def program_log(description, &block)
   puts "#{$indent_variable * $indentation}Begining \"#{description}\""
 
